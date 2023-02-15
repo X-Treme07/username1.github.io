@@ -4,6 +4,18 @@ const tableBody = document.querySelector('#registration-table tbody');
 
 const data = JSON.parse(localStorage.getItem('formData')) || [];
 
+const renderTableHeader = () => {
+    const thead = table.createTHead();
+    const row = thead.insertRow();
+    const headers = ['Name', 'Email', 'Password', 'DOB', 'Accepted Terms'];
+    headers.forEach((header) => {
+      const th = document.createElement('th');
+      const text = document.createTextNode(header);
+      th.appendChild(text);
+      row.appendChild(th);
+    });
+  };
+
 function renderTableRows(data) {
   tableBody.innerHTML = '';
   for (let i = 0; i < data.length; i++) {
