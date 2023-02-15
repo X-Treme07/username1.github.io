@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="file.css">
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      th, td {
+        padding: 10px;
+      }
+      .error-message {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+<link rel="stylesheet" href="file.css">
   </head>
   <body>
-    <h1><center>Registration Form</center></h1>
-    <form>
+    <h1>Registration Form</h1>
+    <form id="registration-form">
       <label for="name">Name:</label>
       <input type="text" id="name" required>
       <br>
@@ -24,6 +39,7 @@
       <input type="checkbox" id="accepted-terms" required>
       <br>
       <button type="submit">Submit</button>
+      <div id="error-message" class="error-message"></div>
     </form>
     <br>
     <table>
@@ -36,12 +52,14 @@
           <th>Accepted terms?</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="registration-entries">
+        <!-- table rows will be added dynamically by JavaScript -->
       </tbody>
     </table>
-
-    <script src="files.js"></script>
-
-    </script>
+    <h2>Submissions:</h2>
+    <ul id="submissions">
+      <!-- list items will be added dynamically by JavaScript -->
+    </ul>
+    <script src="registration-form.js"></script>
   </body>
 </html>
