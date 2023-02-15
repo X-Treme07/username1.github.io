@@ -5,7 +5,6 @@ const tableBody = document.querySelector('#registration-table tbody');
 const data = JSON.parse(localStorage.getItem('formData')) || [];
 
 function renderTableRows(data) {
-  tableBody.innerHTML = '';
   for (let i = 0; i < data.length; i++) {
     const row = document.createElement('tr');
     const name = document.createElement('td');
@@ -26,6 +25,7 @@ function renderTableRows(data) {
     tableBody.appendChild(row);
   }
 }
+
 
 renderTableRows(data);
 
