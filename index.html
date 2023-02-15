@@ -1,65 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
-    <style>
-      table {
-        border-collapse: collapse;
-      }
-      table, th, td {
-        border: 1px solid black;
-      }
-      th, td {
-        padding: 10px;
-      }
-      .error-message {
-        color: red;
-        font-weight: bold;
-      }
-    </style>
-<link rel="stylesheet" href="file.css">
+    <link rel="stylesheet" href="file.css">
   </head>
   <body>
-    <h1>Registration Form</h1>
-    <form id="registration-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-      <br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" required>
-      <br>
-      <label for="dob">DOB:</label>
-      <input type="date" id="dob" required>
-      <br>
-      <label for="accepted-terms">I accept the terms and conditions</label>
-      <input type="checkbox" id="accepted-terms" required>
-      <br>
-      <button type="submit">Submit</button>
-      <div id="error-message" class="error-message"></div>
-    </form>
-    <br>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Password</th>
-          <th>DOB</th>
-          <th>Accepted terms?</th>
-        </tr>
-      </thead>
-      <tbody id="registration-entries">
-        <!-- table rows will be added dynamically by JavaScript -->
-      </tbody>
-    </table>
-    <h2>Submissions:</h2>
-    <ul id="submissions">
-      <!-- list items will be added dynamically by JavaScript -->
-    </ul>
+    <div class="container">
+      <h1>Registration Form</h1>
+      <form id="registration-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="accepted-terms">I accept the terms and conditions:</label>
+        <input type="checkbox" id="accepted-terms" name="accepted-terms" required>
+        <button type="submit">Submit</button>
+      </form>
+      <table id="registration-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Date of Birth</th>
+            <th>Accepted Terms</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
     <script src="files.js"></script>
   </body>
 </html>
